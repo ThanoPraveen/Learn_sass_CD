@@ -1,0 +1,46 @@
+// sass --watch ./Asset/SCSS/10_First_SASS_UI.scss ./Asset/CSS/10_First_SASS_UI.css
+
+@use "./Abstracts/index" as *;
+/* Normal CSS create and used to variable method
+:root {
+    Create Variable and declare variable
+    used in :root {--variable-name: expression;} and calling in var(--variable-name);
+    --app-color: #C04C7E;
+}
+*/
+
+//  $app-color = #{$app-color}
+//  $font-Heebo = #{$font-Heebo}
+// Interpolation SASS
+
+
+// SASS variable create and used in variable method
+// simple method to variable in first $variable-name: expression; and calling to $variable-name;
+
+// global variable
+// variables
+// @import "./Abstracts/Variables/colors";
+// @import "./Abstracts/Variables/fonts";
+
+// Base into rests and urls 
+@use "./Base/rest";
+@use "./Base/urls";
+
+// layout in SCSS
+@use "./Layout/navigation";
+
+
+// components
+@use "./Components/buttons";
+// alert message in heading used to @extend
+// one class should have all the styles of another class
+@use "./Components/alert";
+
+// Home page and welcome card
+@use "./Pages/home";
+
+@use "./Abstracts/index" as *;
+// error checking
+// @error "there is error check #{$theme-color}";
+
+// @debug 1s > 10;

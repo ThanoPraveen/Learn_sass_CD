@@ -1,0 +1,23 @@
+.alert {
+    // display: flex;
+    // flex-direction: row;
+    // flex-flow: row wrap;
+    padding: 15px 20px;
+    margin: 5px;
+    border: 1px solid lightskyblue;
+    background-color: aquamarine;
+    border-radius: 15px;
+
+    &-success {
+        @extend .alert;
+        border: 1px solid red;
+        background-color: lightcoral;
+    }
+
+    &-danger {
+        @extend .alert;
+        border: 1px solid green;
+        background-color: lightgreen;
+
+    }
+}

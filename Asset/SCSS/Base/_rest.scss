@@ -1,0 +1,22 @@
+@use "../Abstracts/index" as *;
+@use "../Abstracts/Function/function" as func;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    /*Called variable*/
+    // background-color: var(--app-color);
+    // background: map-get($theme-color, "primary_bgcolor");
+    // * function used in background color
+    background: func.brand-color();
+    font-family: $font-Heebo;
+    height: 960px;
+    // font-family: 'Send Flowers', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}

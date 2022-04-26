@@ -1,0 +1,31 @@
+@use "../Abstracts/Variables/colors" as *;
+
+/* Nav bar Start */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+
+    &_menu {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &_link {
+        margin-right: 20px;
+        padding: 5px;
+        border-radius: 15px;
+        border: 1px solid lightgray;
+        background: $menu-color;
+        box-shadow: 5px 5px 10px gray;
+        
+        &.active > a:hover {
+            border-radius: 15px;
+            padding: 5px;
+            background-color: #fff;
+            color: red;
+        }
+    }
+}
+/* Nav bar End */
+

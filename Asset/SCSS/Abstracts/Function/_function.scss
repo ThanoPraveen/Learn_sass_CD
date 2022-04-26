@@ -1,0 +1,5 @@
+@use "../index" as func;
+
+@function brand-color($variant: "primary_bgcolor") {
+    @return map-get(func.$theme-color, $variant)
+}

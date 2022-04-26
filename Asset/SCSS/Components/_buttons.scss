@@ -1,0 +1,18 @@
+@use "../Abstracts/index" as mix;
+
+.btn {
+    // @include mixins.btn(#000);
+    &.default {
+        @include mix.btn(#000, #607d8b);
+    }
+    &.primary {
+        @include mix.btn(#000, #d500f9);
+    }
+    &.success {
+        @include mix.btn(#000, #536dfe);
+    }
+    &.dark {
+        // default variable declared in the values
+        @include mix.btn();
+    }
+}

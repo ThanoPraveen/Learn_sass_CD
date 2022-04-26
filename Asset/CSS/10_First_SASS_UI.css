@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600&family=Send+Flowers&css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,30&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  /*Called variable*/
+  background: linear-gradient(45deg, #7300ff, lightGreen);
+  font-family: "Heebo", sans-serif;
+  height: 960px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Nav bar Start */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+.header_menu {
+  list-style-type: none;
+  display: flex;
+}
+.header_link {
+  margin-right: 20px;
+  padding: 5px;
+  border-radius: 15px;
+  border: 1px solid lightgray;
+  background: linear-gradient(180deg, #ffff00, cyan);
+  box-shadow: 5px 5px 10px gray;
+}
+.header_link.active > a:hover {
+  border-radius: 15px;
+  padding: 5px;
+  background-color: #fff;
+  color: red;
+}
+
+/* Nav bar End */
+.btn.default {
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  margin-left: 5px;
+  color: #000;
+  background-color: #607d8b;
+}
+.btn.primary {
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  margin-left: 5px;
+  color: #000;
+  background-color: #d500f9;
+}
+.btn.success {
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  margin-left: 5px;
+  color: #000;
+  background-color: #536dfe;
+}
+.btn.dark {
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  margin-left: 5px;
+  color: #fff;
+  background-color: #000;
+}
+
+.alert, .alert-danger, .alert-success {
+  padding: 15px 20px;
+  margin: 5px;
+  border: 1px solid lightskyblue;
+  background-color: aquamarine;
+  border-radius: 15px;
+}
+.alert-success {
+  border: 1px solid red;
+  background-color: lightcoral;
+}
+.alert-danger {
+  border: 1px solid green;
+  background-color: lightgreen;
+}
+
+.welcome-card {
+  background: linear-gradient(45deg, cyan, #ffff00);
+  border: 2px solid black;
+  box-shadow: 3px 3px rgb(34, 31, 31);
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 20px;
+}
+.welcome-card_title {
+  text-align: center;
+  font-size: 30px;
+}
+.welcome-card_para {
+  padding: 10px;
+  color: hsl(357deg, 53%, 64%);
+  font-family: "Roboto Condensed", sans-serif;
+}
+.welcome-card_btn {
+  background-color: orange;
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 15px;
+  font-size: 12px;
+}
+.welcome-card_another-para {
+  padding: 10px;
+  color: #3F20B6;
+}
+
+/* Normal CSS create and used to variable method
+:root {
+    Create Variable and declare variable
+    used in :root {--variable-name: expression;} and calling in var(--variable-name);
+    --app-color: #C04C7E;
+}
+*/
+
+/*# sourceMappingURL=10_First_SASS_UI.css.map */
