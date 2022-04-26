@@ -129,5 +129,10 @@ a {
     --app-color: #C04C7E;
 }
 */
+.circle-av {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
 
 /*# sourceMappingURL=10_First_SASS_UI.css.map */

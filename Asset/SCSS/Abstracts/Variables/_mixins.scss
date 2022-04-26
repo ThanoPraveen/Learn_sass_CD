@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin btn($color: #fff, $bgcolor: #000) {
     padding: 10px 20px;
     border-radius: 15px;
@@ -5,4 +7,19 @@
     margin-left: 5px;
     color: $color;
     background-color: $bgcolor;
+}
+
+@mixin if_else_learn {
+    padding: 15px;
+}
+
+@mixin avatar($size, $circle: false) {
+    width: $size;
+    height: $size;
+    
+    @if $circle {
+        border-radius: math.div($size, 2);
+    } @else {
+        border-radius: 15px;
+    }
 }
