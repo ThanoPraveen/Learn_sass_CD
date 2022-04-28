@@ -1,0 +1,25 @@
+@use "../Abstracts/index" as *;
+
+// if else used in sass
+
+// .if_else_learn{
+//     $text_limit: 12;
+//     @if $text_limit <= 3 {
+//         color: red;
+//         @include if_else_learn();
+//     } @else if $text_limit > 3 and $text_limit <= 6 {
+//         color: rosybrown;
+//         @include if_else_learn();
+
+//     } @else {
+//         color: rgb(172, 14, 164);
+//         background-color: aquamarine;
+//         border-radius: 15px;
+//         @include if_else_learn();
+//     }
+// }
+
+.circle-av {
+    @include avatar(100px,$circle: true);
+    // @include avatar(100px);
+}

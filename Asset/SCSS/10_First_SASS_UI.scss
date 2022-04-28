@@ -28,6 +28,7 @@
 
 // layout in SCSS
 @use "./Layout/navigation";
+@use "../SCSS/Layout/commons";
 
 
 // components
@@ -45,26 +46,28 @@
 
 // @debug 1s > 10;
 
-// if else used in sass
+// for loop
+// @for <variable> from <expression> to <expression> { ... } or @for <variable> from <expression> through <expression> { ... },
+// If to is used, the final number is excluded; if through is used, it's included.
 
-// .if_else_learn{
-//     $text_limit: 12;
-//     @if $text_limit <= 3 {
-//         color: red;
-//         @include if_else_learn();
-//     } @else if $text_limit > 3 and $text_limit <= 6 {
-//         color: rosybrown;
-//         @include if_else_learn();
-
-//     } @else {
-//         color: rgb(172, 14, 164);
-//         background-color: aquamarine;
-//         border-radius: 15px;
-//         @include if_else_learn();
+// @for $i from 1 to 6 { --> use in to normal type for loop check condition
+// @for $i from 1 through 6 {
+//     h#{$i} {
+//         @if $i != h#{$i} {
+//             font-size: 10px * $i;
+//         }
+//         color: rgb(random(255),random(255), random(255));
 //     }
 // }
 
-.circle-av {
-    @include avatar(100px,$circle: true);
-    // @include avatar(100px);
+// @each at-rule - @each <variable> in <expression> { ... }
+// The @each rule makes it easy to emit styles or evaluate code for each element of a list or each pair in a map.
+
+$spacing: 1,2,3,4,5,6;
+@each $increment in $spacing {
+    .m-#{$increment}, .p#{$increment} {
+        margin: #{$increment}rem;
+        padding: #{$increment}rem;
+        border: 1px solid red;
+    }
 }
