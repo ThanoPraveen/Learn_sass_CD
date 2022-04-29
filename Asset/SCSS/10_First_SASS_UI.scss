@@ -63,11 +63,23 @@
 // @each at-rule - @each <variable> in <expression> { ... }
 // The @each rule makes it easy to emit styles or evaluate code for each element of a list or each pair in a map.
 
-$spacing: 1,2,3,4,5,6;
-@each $increment in $spacing {
-    .m-#{$increment}, .p#{$increment} {
-        margin: #{$increment}rem;
-        padding: #{$increment}rem;
-        border: 1px solid red;
+// $spacing: 1,2,3,4,5,6;
+// @each $increment in $spacing {
+//     .m-#{$increment}, .p#{$increment} {
+//         margin: #{$increment}rem;
+//         padding: #{$increment}rem;
+//         border: 1px solid red;
+//     }
+// }
+
+// use @while loop and we will create starting variable values and loop count to step by step declare in condition
+$count: 1;
+@while $count < 7 {
+    h#{$count} {
+        @if $count != h#{$count} {
+            font-size: 10px * $count;
+        }
+        color: rgb(random(255),random(255), random(255));
     }
+    $count: $count + 1; // increment condition
 }
